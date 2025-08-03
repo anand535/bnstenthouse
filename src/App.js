@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Home from './pages/Home.jsx';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Home />
+      <footer style={{
+        background: 'linear-gradient(90deg, #B91B54 0%, #8938D8 100%)',
+        color: '#fff',
+        textAlign: 'center',
+        padding: '24px 0',
+        marginTop: '48px',
+        fontFamily: 'Montserrat, sans-serif',
+        fontSize: '1rem',
+        letterSpacing: '1px'
+      }}>
+        &copy; {new Date().getFullYear()} Bihari Ji & Sons Tent House. Developed by Your Name.
+      </footer>
     </div>
   );
 }

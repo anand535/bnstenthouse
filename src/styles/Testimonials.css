@@ -1,0 +1,68 @@
+.testimonials-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #f6f7fb;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(78, 84, 200, 0.06);
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2.2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #4e54c8;
+  margin-bottom: 24px;
+}
+
+.testimonials-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.testimonials-carousel {
+  margin-top: 32px;
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(78, 84, 200, 0.12);
+  padding: 24px 18px;
+  margin: 0 12px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  min-height: 180px;
+  justify-content: center;
+  transition: box-shadow 0.2s;
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 6px 24px rgba(78, 84, 200, 0.15);
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.testimonial-author {
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #8f94fb;
+  font-weight: 600;
+}
+
+.slick-dots li button:before {
+  color: #B91B54;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #8938D8;
+}

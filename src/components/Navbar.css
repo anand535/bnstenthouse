@@ -1,0 +1,87 @@
+/* --- Custom Navbar Styles for Figma Design --- */
+.navbar {
+  background: linear-gradient(90deg, #B91B54 0%, #8938D8 100%);
+  color: #F1E8EB;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 120px;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(78, 84, 200, 0.08);
+}
+
+.navbar-link-group {
+  display: flex;
+  align-items: flex-end;
+  height: 120px;
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.navbar-logo {
+  height: 64px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navbar-title-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.navbar-title {
+  font-size: 2.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+.navbar-subtitle {
+  font-size: 1.2rem;
+  font-family: 'Dancing Script', cursive;
+  color: #ffd700;
+  margin-top: 2px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+/* Nav buttons */
+.navbar-link-btn {
+  background: rgba(137, 56, 216, 0.8);
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 2px 8px rgba(78, 84, 200, 0.10);
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.navbar-link-btn:hover {
+  background: #B91B54;
+  color: #ffd700;
+}
+.book-btn {
+  background: #ffd700;
+  color: #B91B54;
+  font-weight: 700;
+}
+.book-btn:hover {
+  background: #B91B54;
+  color: #ffd700;
+}

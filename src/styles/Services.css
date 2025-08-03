@@ -1,0 +1,115 @@
+.services-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #f6f7fb;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(78, 84, 200, 0.06);
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #4e54c8;
+  margin-bottom: 24px;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(78, 84, 200, 0.12);
+  padding: 18px 12px;
+  margin: 0 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 340px;
+}
+
+.service-card:hover {
+  box-shadow: 0 6px 24px rgba(78, 84, 200, 0.15);
+}
+
+.service-img {
+  width: 100%;
+  max-width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 12px rgba(78, 84, 200, 0.08);
+}
+
+.service-title {
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #8f94fb;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.service-desc {
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* Carousel styles for Services and Other Services */
+.services-carousel, .other-services-carousel {
+  margin-top: 32px;
+}
+
+.other-service-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(78, 84, 200, 0.12);
+  padding: 18px 12px;
+  margin: 0 12px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 340px;
+}
+
+.other-service-img {
+  width: 100%;
+  max-width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 12px rgba(78, 84, 200, 0.08);
+}
+
+.other-service-title {
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #8f94fb;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.other-service-desc {
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.slick-dots li button:before {
+  color: #B91B54;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #8938D8;
+}
