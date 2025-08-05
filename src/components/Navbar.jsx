@@ -4,7 +4,7 @@ import './Navbar.css';
 const Navbar = () => (
   <nav className="navbar">
     <div className="navbar-header">
-      <img src={require('../logo.svg').default} alt="B&S Logo" className="navbar-logo" />
+      <img src={require('../logo.svg').default} alt="B&S Logo" className="navbar-logo" style={{cursor: 'pointer'}} onClick={() => window.location.reload()} />
       <div className="navbar-title-group">
         <span className="navbar-title">Bihari Ji & Sons Tent House</span>
         <span className="navbar-subtitle">Transforming Spaces into Celebrations</span>

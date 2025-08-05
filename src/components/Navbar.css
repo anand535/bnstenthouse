@@ -80,6 +80,7 @@
   background: #ffd700;
   color: #B91B54;
   font-weight: 700;
+  display: block;
 }
 .book-btn:hover {
   background: #B91B54;
