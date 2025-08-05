@@ -1,5 +1,5 @@
 .testimonials-section {
-  width: calc(100% - 350px);
+  /* width: calc(100% - 350px); */
   margin: 60px;
   padding: 40px;
   background: #08080826;
@@ -31,7 +31,7 @@
 }
 
 .testimonial-card {
-  background: #fff;
+    background: #ffffff29;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(78, 84, 200, 0.12);
   padding: 18px 12px;
@@ -55,7 +55,7 @@
 .testimonial-text {
   font-size: 1.1rem;
   font-family: 'Roboto', sans-serif;
-  color: #333;
+  color: white;
   margin-bottom: 16px;
 }
 

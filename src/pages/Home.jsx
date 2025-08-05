@@ -33,14 +33,14 @@ const Home = () => (
         <Gallery />
       </div>
     </section>
-    <section id="testimonials">
-      <div className="glass-effect">
-        <Testimonials />
-      </div>
-    </section>
     <section id="other-services">
       <div className="glass-effect">
         <OtherServices />
+      </div>
+    </section>    
+    <section id="testimonials">
+      <div className="glass-effect">
+        <Testimonials />
       </div>
     </section>
     <section id="contact">

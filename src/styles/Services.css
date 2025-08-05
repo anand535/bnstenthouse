@@ -1,5 +1,5 @@
 .services-section {
-  width: calc(100% - 350px);
+  /* width: calc(100% - 350px); */
   margin: 60px;
   padding: 40px;
   background: #08080826;
@@ -24,8 +24,8 @@
   margin-top: 32px;
 }
 
-.service-card {
-  background: #fff;
+.service-card {  
+  background: #ffffff29;
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(78, 84, 200, 0.12);
   padding: 18px 12px;
@@ -54,7 +54,7 @@
 .service-title {
   font-size: 1.2rem;
   font-family: 'Montserrat', sans-serif;
-  color: #8f94fb;
+  color: white;
   margin-bottom: 10px;
   font-weight: 600;
 }

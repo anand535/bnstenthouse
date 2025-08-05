@@ -92,6 +92,7 @@ footer {
     box-shadow: 0 2px 12px rgba(78, 84, 200, 0.10);
     max-width: 480px;
     margin: 0 auto;
+    background: #ffffff29;
 }
 
 .contact-form div {
@@ -104,7 +105,7 @@ footer {
 .contact-form label {
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
-    color: #4e54c8;
+    color: #ffffff;
     font-weight: 600;
 }
 
@@ -117,7 +118,8 @@ footer {
     border-radius: 5px;
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
-    background: #f6f7fb;
+    background: #ffffff29;
+    
 }
 
 .contact-form textarea {
@@ -150,8 +152,7 @@ footer {
     flex-direction: column;
 }
 
-.glass-effect {  
-  padding: 40px 80px;
+.glass-effect {
   width: 100%;
   margin: 32px auto;
 }
