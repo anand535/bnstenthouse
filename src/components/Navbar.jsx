@@ -12,10 +12,10 @@ const Navbar = () => (
     </div>
     <div className="navbar-link-group">
         <ul className="navbar-links">
-        <li><a href="#home" className="navbar-link-btn">Home</a></li>
-        <li><a href="#services" className="navbar-link-btn">Services</a></li>
-        <li><a href="#gallery" className="navbar-link-btn">Gallery</a></li>
-        <li><a href="#contact" className="navbar-link-btn book-btn">Book Consultation</a></li>
+          <li><a href="#home" className="navbar-link-btn">Home</a></li>
+          <li><a href="#services" className="navbar-link-btn">Services</a></li>
+          <li><a href="#gallery" className="navbar-link-btn">Gallery</a></li>
+          <li><a href="#contact" className="navbar-link-btn book-btn">Book Consultation</a></li>
         </ul>
     </div>
   </nav>

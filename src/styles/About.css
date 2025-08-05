@@ -1,17 +1,17 @@
 .about {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 40px;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(78, 84, 200, 0.08);
-  text-align: left;
+  width: calc(100% - 350px);
+    margin: 60px;
+    padding: 40px;
+    background: #08080826;
+    border-radius: 16px;
+    /* box-shadow: 0 4px 24px rgba(78, 84, 200, 0.08); */
+    text-align: center;
 }
 
 .about h1 {
   font-size: 2.5rem;
   font-family: 'Montserrat', sans-serif;
-  color: #4e54c8;
+  color: #ffffff;
   margin-bottom: 24px;
 }
 
@@ -26,7 +26,7 @@
 .about p {
   font-size: 1.1rem;
   font-family: 'Roboto', sans-serif;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 18px;
 }
 

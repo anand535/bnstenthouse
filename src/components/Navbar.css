@@ -4,17 +4,18 @@
   color: #F1E8EB;
   padding: 0 32px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   min-height: 120px;
   position: relative;
   box-shadow: 0 2px 8px rgba(78, 84, 200, 0.08);
+  flex-direction: column;
+  padding-top: 30px;
 }
 
 .navbar-link-group {
   display: flex;
-  align-items: flex-end;
-  height: 120px;
+  align-items: center;
+  height: 50px;
+  justify-content: flex-end;
 }
 
 .navbar-header {
@@ -24,7 +25,7 @@
 }
 
 .navbar-logo {
-  height: 64px;
+  height: 100px;
   width: auto;
   display: inline-block;
   vertical-align: middle;
@@ -51,7 +52,6 @@
 .navbar-links {
   list-style: none;
   display: flex;
-  gap: 18px;
   margin: 0;
   padding: 0;
   align-items: center;
@@ -59,7 +59,7 @@
 
 /* Nav buttons */
 .navbar-link-btn {
-  background: rgba(137, 56, 216, 0.8);
+  background: rgb(20 20 20 / 28%);
   color: #fff;
   padding: 8px 22px;
   border-radius: 6px;

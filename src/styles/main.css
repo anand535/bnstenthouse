@@ -20,10 +20,6 @@ h1 {
     margin: 0;
 }
 
-nav {
-    margin: 20px 0;
-}
-
 nav a {
     color: #ffffff;
     text-decoration: none;
@@ -114,7 +110,7 @@ footer {
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
+    width: calc( 100% - 25px);
     margin-bottom: 0;
     padding: 12px;
     border: 1px solid #dddddd;
@@ -148,23 +144,15 @@ footer {
 }
 
 #home-page section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 60vh;
-  padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.glass-effect {
-  background: rgba(255, 255, 255, 0.18);
-  border-radius: 24px;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  padding: 40px 32px;
+.glass-effect {  
+  padding: 40px 80px;
   width: 100%;
-  max-width: 900px;
   margin: 32px auto;
 }
 

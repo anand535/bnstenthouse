@@ -1,9 +1,10 @@
 import React from 'react';
+import '../styles/Contact.css';
 
 const Contact = () => {
     return (
-        <div className="contact" style={{maxWidth: '900px', margin: '60px auto', padding: '40px', background: '#fff', borderRadius: '16px', boxShadow: '0 4px 24px rgba(78, 84, 200, 0.08)'}}>
-            <h1 style={{fontSize: '2rem', fontFamily: 'Montserrat, sans-serif', color: '#4e54c8', marginBottom: '24px'}}>Contact Us</h1>
+        <div className="contact-section">
+            <h1 style={{fontSize: '2rem', fontFamily: 'Montserrat, sans-serif', color: 'white', marginBottom: '24px', textAlign: 'center'}}>Contact Us</h1>
             <form className="contact-form">
                 <div>
                     <label htmlFor="name">Name:</label>

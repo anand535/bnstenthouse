@@ -30,12 +30,13 @@ const About = () => {
           Crafting Celebrations with Elegance & Heart
         </h2>
         <p>
-          At Bihari Ji & Sons in Varanasi, we believe that every moment deserves to be celebrated in style. With years of experience and a flair for premium décor, our team transforms weddings, corporate events, and private celebrations into unforgettable experiences.
+          At Bihari Ji & Sons in Varanasi, we believe that every moment deserves to be celebrated in style. <br/>
+          With years of experience and a flair for premium décor, our team transforms weddings, corporate events, and private celebrations into unforgettable experiences.
         </p>
       </div>
       <div ref={cardRefs[1]} className="about-card right">
         <h2 style={{ color: '#e6b98a', fontWeight: 700, marginTop: '32px' }}>Why Choose Us?</h2>
-        <ul style={{ listStyle: 'none', paddingLeft: 0, marginBottom: '24px' }}>
+        <ul style={{ listStyle: 'none', paddingLeft: 0, marginBottom: '24px', color: '#ffffff', marginLeft: '40px' }}>
           <li>✨ <b>Signature Style</b> – Thoughtfully curated décor themes tailored to your event</li>
           <li>🌷 <b>Expert Team</b> – Creative professionals with an eye for detail and trends</li>
           <li>💡 <b>Custom Concepts</b> – Designs that reflect your personality and vision</li>
@@ -45,12 +46,15 @@ const About = () => {
       <div ref={cardRefs[2]} className="about-card">
         <h2 style={{ color: '#e6b98a', fontWeight: 700, fontStyle: 'italic', marginTop: '32px' }}>From Concept to Creation</h2>
         <p>
-          Whether you're planning a traditional ceremony or a modern soirée, we handle everything — from floral installations and lighting setups to custom backdrops and mood-enhancing accents. Every piece is placed with care, every detail polished to perfection.
+          Whether you're planning a traditional ceremony or a modern soirée, <br/>
+          we handle everything — from floral installations and lighting setups to custom backdrops and mood-enhancing accents.<br/>
+          Every piece is placed with care, every detail polished to perfection.
         </p>
       </div>
       <div ref={cardRefs[3]} className="about-card right">
         <p style={{ color: '#e6b98a', fontStyle: 'italic', marginTop: '32px' }}>
-          🎊 <b>Let’s Celebrate Together</b> &nbsp; Step into a world where design meets emotion. Bihari Ji & Sons is your trusted partner in creating décor that’s more than beautiful—it’s meaningful.
+          🎊 <b>Let’s Celebrate Together</b> &nbsp; <br/>
+          Step into a world where design meets emotion. Bihari Ji & Sons is your trusted partner in creating décor that’s more than beautiful—it’s meaningful.
         </p>
       </div>
     </div>

@@ -27,7 +27,7 @@ const settings = {
 const Gallery = () => (
   <section id="gallery" className="gallery-section">
     <h2>Gallery</h2>
-    <p>Check out some of our past events!</p>
+    <p style={{color: 'white'}}>Check out some of our past events!</p>
     <Slider {...settings} className="gallery-carousel">
       {galleryImages.map((img, idx) => (
         <div className="gallery-card" key={idx}>

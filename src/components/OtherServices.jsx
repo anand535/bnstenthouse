@@ -25,22 +25,12 @@ const otherServicesData = [
   }
 ];
 
-const settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  responsive: [
-    { breakpoint: 900, settings: { slidesToShow: 2 } },
-    { breakpoint: 600, settings: { slidesToShow: 1 } }
-  ]
-};
+
 
 const OtherServices = () => (
   <section id="other-services" className="other-services-section">
     <h2>Other Services</h2>
-    <Slider {...settings} className="other-services-carousel">
+    <div className="other-services-list">
       {otherServicesData.map((service, idx) => (
         <div className="other-service-card" key={idx}>
           <img src={service.img} alt={service.title} className="other-service-img" />
@@ -48,7 +38,7 @@ const OtherServices = () => (
           <div className="other-service-desc">{service.desc}</div>
         </div>
       ))}
-    </Slider>
+    </div>
   </section>
 );
 

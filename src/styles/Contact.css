@@ -1,0 +1,19 @@
+.contact-section {
+  width: calc(100% - 350px);
+  margin: 60px;
+  padding: 40px;
+  background: #08080826;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(78, 84, 200, 0.08);
+  text-align: left;
+  overflow: hidden;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #4e54c8;
+  margin-bottom: 24px;
+}
+
+/* Add more styles for contact form fields as needed */

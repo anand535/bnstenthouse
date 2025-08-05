@@ -18,12 +18,14 @@
   font-weight: 700;
   margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
+  color:#9132c0;
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   margin-bottom: 30px;
   font-family: 'Roboto', sans-serif;
+  color:#4f0d8b;
 }
 
 .hero-btn {
