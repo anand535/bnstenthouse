@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/Gallery.css';
 
 const galleryImages = [
-  'https://images.unsplash.com/photo-1506744038136-46273834b3fb',
-  'https://images.unsplash.com/photo-1465101046530-73398c7f28ca',
-  'https://images.unsplash.com/photo-1519125323398-675f0ddb6308',
-  'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e',
-  'https://images.unsplash.com/photo-1438761681033-6461ffad8d80'
+  '/images/gallery/image1.jpg',
+  '/images/gallery/image2.jpg',
+  '/images/gallery/image3.jpg',
+  '/images/gallery/image4.jpg',
+  '/images/gallery/image5.jpg',
+  '/images/gallery/image6.jpg',
+  '/images/gallery/image7.jpg',
+  '/images/gallery/image8.jpg',
+  '/images/gallery/image9.jpg',
+  '/images/gallery/image10.jpg'
 ];
 
 const settings = {
@@ -24,18 +29,66 @@ const settings = {
   ]
 };
 
-const Gallery = () => (
-  <section id="gallery" className="gallery-section">
-    <h2>Gallery</h2>
-    <p style={{color: 'white'}}>Check out some of our past events!</p>
-    <Slider {...settings} className="gallery-carousel">
-      {galleryImages.map((img, idx) => (
-        <div className="gallery-card" key={idx}>
-          <img src={img} alt={`Event ${idx + 1}`} className="gallery-img" />
+const Gallery = () => {
+  const [overlayOpen, setOverlayOpen] = useState(false);
+  const [currentIdx, setCurrentIdx] = useState(0);
+
+  const openOverlay = (idx) => {
+    setCurrentIdx(idx);
+    setOverlayOpen(true);
+  };
+  const closeOverlay = () => setOverlayOpen(false);
+  const prevImg = (e) => {
+    e.stopPropagation();
+    setCurrentIdx((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+  };
+  const nextImg = (e) => {
+    e.stopPropagation();
+    setCurrentIdx((prev) => (prev + 1) % galleryImages.length);
+  };
+
+  return (
+    <section id="gallery" className="gallery-section">
+      <h2>Gallery</h2>
+      <p style={{color: 'white'}}>Check out some of our past events!</p>
+      <Slider {...settings} className="gallery-carousel">
+        {galleryImages.map((img, idx) => (
+          <div className="gallery-card" key={idx}>
+            <img
+              src={img}
+              alt={`Event ${idx + 1}`}
+              className="gallery-img"
+              style={{ cursor: 'pointer' }}
+              onClick={() => openOverlay(idx)}
+            />
+          </div>
+        ))}
+      </Slider>
+
+      {overlayOpen && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            background: 'rgba(0,0,0,0.85)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 9999
+          }}
+          onClick={closeOverlay}
+        >
+          <button onClick={prevImg} style={{ position: 'absolute', left: 40, top: '50%', fontSize: 32, color: '#fff', background: 'none', border: 'none', cursor: 'pointer' }}>&lt;</button>
+          <img src={galleryImages[currentIdx]} alt="Gallery Large" style={{ maxHeight: '80vh', maxWidth: '80vw', borderRadius: 12, boxShadow: '0 4px 24px #0008' }} />
+          <button onClick={nextImg} style={{ position: 'absolute', right: 40, top: '50%', fontSize: 32, color: '#fff', background: 'none', border: 'none', cursor: 'pointer' }}>&gt;</button>
+          <button onClick={closeOverlay} style={{ position: 'absolute', top: 30, right: 30, fontSize: 32, color: '#fff', background: 'none', border: 'none', cursor: 'pointer' }}>&#10005;</button>
         </div>
-      ))}
-    </Slider>
-  </section>
-);
+      )}
+    </section>
+  );
+};
 
 export default Gallery;

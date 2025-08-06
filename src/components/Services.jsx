@@ -4,30 +4,30 @@ import '../styles/Services.css';
 
 const serviceData = [
   {
-    title: 'Event Planning',
-    desc: 'Comprehensive planning for corporate, social, and private events.',
-    img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb'
+    title: 'Wedding Decoration',
+    desc: 'Elegant and personalized decorations for your special day.',
+    img: '/images/Wedding-Decor.jpg' // Updated to use relative path
   },
   {
-    title: 'Venue Coordination',
-    desc: 'Finding and managing the perfect venue for your event.',
-    img: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca'
+    title: 'Corporate Events',
+    desc: 'Professional event management for conferences, seminars, and corporate gatherings.',
+    img: '/images/Corporate-Events.jpg' // Updated to use relative path
   },
   {
-    title: 'Catering Services',
-    desc: 'Delicious menus tailored to your event and guests.',
-    img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308'
+    title: 'Birthday Parties & Decorations',
+    desc: 'Fun and creative themes for unforgettable birthday celebrations.',
+    img: '/images/Birthday-decor.jpg' // Updated to use relative path
   },
-  {
-    title: 'Entertainment',
-    desc: 'Music, performances, and activities to engage your guests.',
-    img: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e'
-  },
-  {
-    title: 'Logistics',
-    desc: 'Seamless coordination of transport, setup, and schedules.',
-    img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80'
-  }
+  // {
+  //   title: 'Entertainment',
+  //   desc: 'Music, performances, and activities to engage your guests.',
+  //   img: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e'
+  // },
+  // {
+  //   title: 'Logistics',
+  //   desc: 'Seamless coordination of transport, setup, and schedules.',
+  //   img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80'
+  // }
 ];
 
 // No carousel settings needed for static cards

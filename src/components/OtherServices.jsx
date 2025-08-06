@@ -5,23 +5,28 @@ import '../styles/OtherServices.css';
 const otherServicesData = [
   {
     title: 'Catering',
-    desc: 'Custom menus and professional catering for any event size.',
-    img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308'
+    desc: 'Delicious food options to suit every palate.',
+    img: 'images/services/catering.jpg'
   },
   {
-    title: 'Decoration',
-    desc: 'Creative themes and decor to transform your venue.',
-    img: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca'
+    title: 'Band Dhol & DJ',
+    desc: 'Bannd Dhol for Barat, DJ and more to keep guests engaged.',
+    img: 'images/services/band.jpg'
   },
   {
-    title: 'Entertainment',
-    desc: 'Live music, DJs, performers, and more to keep guests engaged.',
-    img: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e'
-  },
-  {
-    title: 'Photography',
+    title: 'Photographers',
     desc: 'Capture every moment with our professional photographers.',
-    img: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80'
+    img: 'images/services/photographer.jpg'
+  },
+  {
+    title: 'Anchors',
+    desc: 'Engaging anchors to keep the event lively.',
+    img: 'images/services/anchor.jpg'
+  },
+  {
+    title: 'Singers & Performers',
+    desc: 'Live performances to entertain your guests.',
+    img: 'images/services/performers.jpg'
   }
 ];
 

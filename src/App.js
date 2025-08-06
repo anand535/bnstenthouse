@@ -16,7 +16,7 @@ function App() {
         fontSize: '1rem',
         letterSpacing: '1px'
       }}>
-        &copy; {new Date().getFullYear()} Bihari Ji & Sons Tent House. Developed by Your Name.
+        &copy; {new Date().getFullYear()} Bihari Ji & Sons Tent House. Developed by Anand Prakash.
       </footer>
     </div>
   );
