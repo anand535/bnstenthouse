@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,42 +6,60 @@ import '../styles/Testimonials.css';
 
 const testimonialsData = [
   {
-    text: 'B-S made our wedding day absolutely perfect! Every detail was handled with care and professionalism.',
-    author: 'Sarah & Mike'
+    text: 'Working with Biharji and Sons was an amazing experience. Their attention to detail and creative ideas made our celebration truly special.',
+    author: 'Aditya & Family'
   },
   {
-    text: 'The team at B-S exceeded our expectations for our corporate event. Highly recommended!',
-    author: 'Acme Corp.'
+    text: 'The team transformed our vision into reality. Their dedication and professionalism made our event stress-free and memorable.',
+    author: 'Jyoti Anand.'
   },
   {
-    text: 'From planning to execution, everything was seamless. Thank you for making our celebration unforgettable!',
-    author: 'Priya S.'
+    text: 'Exceptional service from start to finish. They handled everything perfectly and created an atmosphere that exceeded our expectations.',
+    author: 'Adesh Prasad.'
   }
 ];
 
-const settings = {
+const getSlidesToShow = (width) => {
+  if (width < 600) return 1;
+  if (width < 900) return 2;
+  return 3;
+};
+
+const baseSettings = {
   dots: true,
   infinite: true,
   speed: 500,
-  slidesToShow: 2,
   slidesToScroll: 1,
-  responsive: [
-    { breakpoint: 900, settings: { slidesToShow: 1 } }
-  ]
 };
 
-const Testimonials = () => (
-  <section id="testimonials" className="testimonials-section">
-    <h2>Testimonials</h2>
-    <Slider {...settings} className="testimonials-carousel">
-      {testimonialsData.map((testimonial, idx) => (
-        <div className="testimonial-card" key={idx}>
-          <div className="testimonial-text">{testimonial.text}</div>
-          <div className="testimonial-author">{testimonial.author}</div>
-        </div>
-      ))}
-    </Slider>
-  </section>
-);
+const Testimonials = () => {
+  const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow(window.innerWidth));
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSlidesToShow(getSlidesToShow(window.innerWidth));
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return (
+    <section id="testimonials" className="testimonials-section">
+      <h2>Testimonials</h2>
+      <Slider
+        {...baseSettings}
+        slidesToShow={slidesToShow}
+        className="testimonials-carousel"
+      >
+        {testimonialsData.map((testimonial, idx) => (
+          <div className="testimonial-card" key={idx}>
+            <div className="testimonial-text">{testimonial.text}</div>
+            <div className="testimonial-author">{testimonial.author}</div>
+          </div>
+        ))}
+      </Slider>
+    </section>
+  );
+};
 
 export default Testimonials;

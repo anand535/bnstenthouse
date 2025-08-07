@@ -1,4 +1,4 @@
-/* --- Custom Navbar Styles for Figma Design --- */
+/* Base styles */
 .navbar {
   background: linear-gradient(90deg, #B91B54 0%, #8938D8 100%);
   color: #F1E8EB;
@@ -11,6 +11,35 @@
   padding-top: 30px;
 }
 
+.navbar-header {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  position: relative;
+}
+
+.navbar-logo {
+  height: 48px;
+  margin-right: 1rem;
+}
+
+.navbar-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar-subtitle {
+  font-size: 0.95rem;
+  color: #fff8;
+  margin-top: 2px;
+}
+
 .navbar-link-group {
   display: flex;
   align-items: center;
@@ -18,71 +47,100 @@
   justify-content: flex-end;
 }
 
-.navbar-header {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.navbar-logo {
-  height: 100px;
-  width: auto;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.navbar-title-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.navbar-title {
-  font-size: 2.2rem;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #fff;
-}
-.navbar-subtitle {
-  font-size: 1.2rem;
-  font-family: 'Dancing Script', cursive;
-  color: #ffd700;
-  margin-top: 2px;
-}
-
 .navbar-links {
-  list-style: none;
   display: flex;
+  gap: 1.5rem;
+  list-style: none;
   margin: 0;
   padding: 0;
-  align-items: center;
 }
 
-/* Nav buttons */
 .navbar-link-btn {
-  background: rgb(20 20 20 / 28%);
   color: #fff;
-  padding: 8px 22px;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
   text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.navbar-link-btn:hover,
+.navbar-link-btn.book-btn {
+  background: #fff2;
+}
+
+/* Hamburger styles */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background: none;
   border: none;
-  box-shadow: 0 2px 8px rgba(78, 84, 200, 0.10);
-  transition: background 0.2s, color 0.2s;
   cursor: pointer;
+  margin-left: auto;
+  z-index: 1001;
 }
-.navbar-link-btn:hover {
-  background: #B91B54;
-  color: #ffd700;
+
+.hamburger-bar {
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
 }
-.book-btn {
-  background: #ffd700;
-  color: #B91B54;
-  font-weight: 700;
-  display: block;
-}
-.book-btn:hover {
-  background: #B91B54;
-  color: #ffd700;
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .navbar-header {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-link-group {
+    position: absolute;
+    top: 95px;
+    left: 0;
+    width: 100vw;
+    background: #1a1a1ab3;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 16px #0004;
+    height: 80px;
+  }
+  .navbar-link-group.open {
+    display: flex;
+  }
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+
+  .navbar-links li{
+    border-bottom: 1px solid rgba(255, 255, 255, 255);
+    width: 100%;
+  }
+
+  
+  .navbar-links li:nth-child(4) {
+    margin-top: 5px;
+    border-bottom: unset;
+  }
+
+  .navbar-link-btn {
+    width: 100%;
+    text-align: left;
+    padding: 0.1rem 1rem;
+    font-size: 1.1rem;
+    border-radius: 0;
+    border-bottom: 1px solid #fff1;
+  }
+  .navbar-hamburger {
+    display: flex;
+  }
 }
