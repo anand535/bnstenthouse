@@ -1,27 +1,29 @@
-import React, { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/Gallery.css';
 
+const getSlidesToShow = (width) => {
+  if (width < 600) return 1;
+  if (width < 900) return 2;
+  if (width < 1200) return 3;
+  if (width < 1500) return 4;
+  return 5;
+};
 
-const settings = {
+const baseSettings = {
   dots: true,
   infinite: true,
   speed: 500,
-  slidesToShow: 3,
   slidesToScroll: 1,
-  responsive: [
-    { breakpoint: 900, settings: { slidesToShow: 2 } },
-    { breakpoint: 600, settings: { slidesToShow: 1 } }
-  ]
 };
 
 const Gallery = () => {
   const [overlayOpen, setOverlayOpen] = useState(false);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [galleryImages, setGalleryImages] = useState([]);
+  const [slidesToShow, setSlidesToShow] = useState(getSlidesToShow(window.innerWidth));
 
   const openOverlay = (idx) => {
     setCurrentIdx(idx);
@@ -37,30 +39,37 @@ const Gallery = () => {
     setCurrentIdx((prev) => (prev + 1) % galleryImages.length);
   };
 
-  
+  useEffect(() => {
+    const handleResize = () => {
+      setSlidesToShow(getSlidesToShow(window.innerWidth));
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
-    
-  debugger
     const generateGalleryUrls = () => {
       const baseUrl = 'https://v5iuluhlwynnbfbz.public.blob.vercel-storage.com/gallery/';
       const imageCount = 10;
-      const urls = Array.from({ length: imageCount }, (_, i) => 
+      const urls = Array.from({ length: imageCount }, (_, i) =>
         `${baseUrl}${i + 1}.jpg`
       );
       setGalleryImages(urls);
     };
-
     generateGalleryUrls();
   }, []);
 
   return (
     <section id="gallery" className="gallery-section">
       <h2>Gallery</h2>
-      <p style={{color: 'white'}}>Check out some of our past events!</p>
-      
+      <p style={{ color: 'white' }}>Check out some of our past events!</p>
+
       {galleryImages.length > 0 && (
-        <Slider {...settings} className="gallery-carousel">
+        <Slider
+          {...baseSettings}
+          slidesToShow={slidesToShow}
+          className="gallery-carousel"
+        >
           {galleryImages.map((img, idx) => (
             <div className="gallery-card" key={idx}>
               <img
