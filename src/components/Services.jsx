@@ -6,17 +6,17 @@ const serviceData = [
   {
     title: 'Wedding Decoration',
     desc: 'Elegant and personalized decorations for your special day.',
-    img: '/images/Wedding-Decor.jpg' // Updated to use relative path
+    img: 'https://v5iuluhlwynnbfbz.public.blob.vercel-storage.com/services/Wedding-Decor.jpg' // Updated to use relative path
   },
   {
     title: 'Corporate Events',
     desc: 'Professional event management for conferences, seminars, and corporate gatherings.',
-    img: '/images/Corporate-Events.jpg' // Updated to use relative path
+    img: 'https://v5iuluhlwynnbfbz.public.blob.vercel-storage.com/services/Corporate-Events.jpg' // Updated to use relative path
   },
   {
     title: 'Birthday Parties & Decorations',
     desc: 'Fun and creative themes for unforgettable birthday celebrations.',
-    img: '/images/Birthday-decor.jpg' // Updated to use relative path
+    img: 'https://v5iuluhlwynnbfbz.public.blob.vercel-storage.com/services/Birthday-decor.jpg' // Updated to use relative path
   },
   // {
   //   title: 'Entertainment',

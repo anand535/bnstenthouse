@@ -1,21 +1,10 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/Gallery.css';
 
-const galleryImages = [
-  '/images/gallery/image1.jpg',
-  '/images/gallery/image2.jpg',
-  '/images/gallery/image3.jpg',
-  '/images/gallery/image4.jpg',
-  '/images/gallery/image5.jpg',
-  '/images/gallery/image6.jpg',
-  '/images/gallery/image7.jpg',
-  '/images/gallery/image8.jpg',
-  '/images/gallery/image9.jpg',
-  '/images/gallery/image10.jpg'
-];
 
 const settings = {
   dots: true,
@@ -32,6 +21,7 @@ const settings = {
 const Gallery = () => {
   const [overlayOpen, setOverlayOpen] = useState(false);
   const [currentIdx, setCurrentIdx] = useState(0);
+  const [galleryImages, setGalleryImages] = useState([]);
 
   const openOverlay = (idx) => {
     setCurrentIdx(idx);
@@ -47,23 +37,43 @@ const Gallery = () => {
     setCurrentIdx((prev) => (prev + 1) % galleryImages.length);
   };
 
+  
+
+  useEffect(() => {
+    
+  debugger
+    const generateGalleryUrls = () => {
+      const baseUrl = 'https://v5iuluhlwynnbfbz.public.blob.vercel-storage.com/gallery/';
+      const imageCount = 10;
+      const urls = Array.from({ length: imageCount }, (_, i) => 
+        `${baseUrl}${i + 1}.jpg`
+      );
+      setGalleryImages(urls);
+    };
+
+    generateGalleryUrls();
+  }, []);
+
   return (
     <section id="gallery" className="gallery-section">
       <h2>Gallery</h2>
       <p style={{color: 'white'}}>Check out some of our past events!</p>
-      <Slider {...settings} className="gallery-carousel">
-        {galleryImages.map((img, idx) => (
-          <div className="gallery-card" key={idx}>
-            <img
-              src={img}
-              alt={`Event ${idx + 1}`}
-              className="gallery-img"
-              style={{ cursor: 'pointer' }}
-              onClick={() => openOverlay(idx)}
-            />
-          </div>
-        ))}
-      </Slider>
+      
+      {galleryImages.length > 0 && (
+        <Slider {...settings} className="gallery-carousel">
+          {galleryImages.map((img, idx) => (
+            <div className="gallery-card" key={idx}>
+              <img
+                src={img}
+                alt={`Event ${idx + 1}`}
+                className="gallery-img"
+                style={{ cursor: 'pointer' }}
+                onClick={() => openOverlay(idx)}
+              />
+            </div>
+          ))}
+        </Slider>
+      )}
 
       {overlayOpen && (
         <div
