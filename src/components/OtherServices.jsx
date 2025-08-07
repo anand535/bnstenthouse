@@ -6,27 +6,27 @@ const otherServicesData = [
   {
     title: 'Catering',
     desc: 'Delicious food options to suit every palate.',
-    img: 'images/services/catering.jpg'
+    img: 'images/catering.jpg'
   },
   {
     title: 'Band Dhol & DJ',
     desc: 'Bannd Dhol for Barat, DJ and more to keep guests engaged.',
-    img: 'images/services/band.jpg'
+    img: 'images/band.jpg'
   },
   {
     title: 'Photographers',
     desc: 'Capture every moment with our professional photographers.',
-    img: 'images/services/photographer.jpg'
+    img: 'images/photographer.jpg'
   },
   {
     title: 'Anchors',
     desc: 'Engaging anchors to keep the event lively.',
-    img: 'images/services/anchor.jpg'
+    img: 'images/anchor.jpg'
   },
   {
     title: 'Singers & Performers',
     desc: 'Live performances to entertain your guests.',
-    img: 'images/services/performers.jpg'
+    img: 'images/performers.jpg'
   }
 ];
 
