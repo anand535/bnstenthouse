@@ -159,7 +159,11 @@ footer {
 
 @media (max-width: 900px) {
   .glass-effect {
-    padding: 18px 8px;
     max-width: 98vw;
   }
+
+  footer {
+    width: unset;
+  }
+
 }

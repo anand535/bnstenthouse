@@ -42,7 +42,7 @@
   box-shadow: 0 6px 24px rgba(78, 84, 200, 0.15);
 }
 
-.service-img {
+7{
   width: 400px;
   height: 250px;
   object-fit: cover;
@@ -135,4 +135,21 @@
 
 .slick-dots li.slick-active button:before {
   color: #8938D8;
+}
+
+
+@media (max-width: 900px) {
+  .services-section  {
+    margin: 10px;
+    padding: 20px;
+  }
+  .service-card {
+    width: 320px;
+  }
+  .service-img {
+    width: 100%;
+    height: auto;
+    max-width: 320px; 
+    margin-bottom: 18px;
+  }
 }

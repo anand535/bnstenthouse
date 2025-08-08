@@ -10,7 +10,7 @@ function App() {
         background: 'linear-gradient(90deg, #B91B54 0%, #8938D8 100%)',
         color: '#fff',
         textAlign: 'center',
-        padding: '24px 0',
+        padding: '24px',
         marginTop: '48px',
         fontFamily: 'Montserrat, sans-serif',
         fontSize: '1rem',

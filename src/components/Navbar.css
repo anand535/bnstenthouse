@@ -114,6 +114,7 @@
   }
   .navbar-link-group.open {
     display: flex;
+    background: #febdc5;
   }
   .navbar-links {
     flex-direction: column;
@@ -139,6 +140,7 @@
     font-size: 1.1rem;
     border-radius: 0;
     border-bottom: 1px solid #fff1;
+    color: #b41d60;
   }
   .navbar-hamburger {
     display: flex;

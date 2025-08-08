@@ -70,3 +70,10 @@
 .slick-dots li.slick-active button:before {
   color: #8938D8;
 }
+
+@media (max-width: 900px) {
+  .other-services-section {
+    margin: 10px;
+    padding: 20px;
+  }
+}
