@@ -42,7 +42,8 @@
   box-shadow: 0 6px 24px rgba(78, 84, 200, 0.15);
 }
 
-7{
+
+.service-img{
   width: 400px;
   height: 250px;
   object-fit: cover;

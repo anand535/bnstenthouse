@@ -67,7 +67,7 @@
 
 .navbar-link-btn:hover,
 .navbar-link-btn.book-btn {
-  background: #dfc60e85;
+  background: #b7000075;
 }
 
 /* Hamburger styles */
@@ -102,11 +102,8 @@
   .navbar-link-group {
     position: absolute;
     top: 95px;
-    left: 0;
-    width: 100vw;
+    right: 54px;
     background: #1a1a1ab3;
-    flex-direction: column;
-    align-items: flex-start;
     padding: 1rem 0;
     display: none;
     z-index: 1000;
@@ -119,7 +116,6 @@
   }
   .navbar-links {
     flex-direction: column;
-    width: 100%;
     gap: 0;
   }
 
@@ -142,8 +138,13 @@
     border-radius: 0;
     border-bottom: 1px solid #fff1;
     color: #b41d60;
+    background: unset;
   }
   .navbar-hamburger {
     display: flex;
+  }
+  .navbar-link-btn:hover,
+  .navbar-link-btn.book-btn {
+    background: unset;
   }
 }
