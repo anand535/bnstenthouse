@@ -62,11 +62,12 @@
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background 0.2s;
+  background: #00000054;
 }
 
 .navbar-link-btn:hover,
 .navbar-link-btn.book-btn {
-  background: #fff2;
+  background: #dfc60e85;
 }
 
 /* Hamburger styles */

@@ -144,12 +144,12 @@
     padding: 20px;
   }
   .service-card {
-    width: 320px;
+    width: 260px;
   }
   .service-img {
-    width: 100%;
-    height: auto;
-    max-width: 320px; 
-    margin-bottom: 18px;
+    width: 220px;
+    height: 140px;
+    max-width: 320px;
+    margin-bottom: 18px; 
   }
 }
